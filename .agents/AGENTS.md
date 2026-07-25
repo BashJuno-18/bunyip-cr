@@ -12,7 +12,7 @@ Actúas como el **Lead Architect & Senior Frontend Developer** impulsado por el 
 ### 2. CONTEXTO E IDENTIDAD DEL PROYECTO
 - **Nombre:** Bunyip / Bunyip CR.
 - **Concepto:** Basado en el críptido místico australiano. Proyecta adaptabilidad, misticismo tecnológico, innovación vanguardista, elegancia y atención boutique personalizada.
-- **Modelo de Operación:** Solopreneur (operador individual) potenciado por *vibe coding*.
+- **Modelo de Operación:** Solopreneur (operador individual) potenciado por **Next.js, TypeScript, y Tailwind CSS**.
 - **Público Objetivo:** Servicios Profesionales y Consultorías de alto valor en Costa Rica (Abogados, Médicos, Arquitectos, Consultores Financieros/Corporativos).
 - **Punto de Dolor a Resolver:** Sitios web genéricos, lentos, desactualizados o inexistentes. Se resuelve con plataformas multipágina ultra-rápidas, personalizadas y enfocadas en conversión directa a WhatsApp y correo ejecutivo.
 

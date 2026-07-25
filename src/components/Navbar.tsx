@@ -36,37 +36,19 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "py-3" : "py-5"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${
+        scrolled
+          ? "bg-[#0B100D]/90 backdrop-blur-lg border-[#1E2822] py-4"
+          : "bg-transparent border-transparent py-6"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <nav
-          className={`flex items-center justify-between px-6 py-3 rounded-full border transition-all duration-300 ${
-            scrolled
-              ? "bg-[#121814]/80 backdrop-blur-lg border-[#1E2822] shadow-[0_8px_32px_rgba(0,0,0,0.37)]"
-              : "bg-[#121814]/50 backdrop-blur-md border-[#1E2822]/60"
-          }`}
-        >
+        <nav className="flex items-center justify-between">
           {/* Logo Brand */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-10 h-10 overflow-hidden rounded-full border border-[#E2C044]/30 bg-[#0B100D] p-1 flex items-center justify-center transition-transform duration-300 group-hover:scale-105 group-hover:border-[#39FF14]/50">
-              <Image
-                src="/assets/main-logo.png"
-                alt="Bunyip CR Logo"
-                width={36}
-                height={36}
-                className="object-contain filter invert brightness-125 contrast-125"
-              />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-heading font-bold text-lg tracking-wider text-[#F4F5F0] group-hover:text-[#E2C044] transition-colors">
-                BUNYIP <span className="text-[#39FF14]">CR</span>
-              </span>
-              <span className="text-[10px] font-sans text-[#A1AAA2] tracking-widest uppercase -mt-1">
-                Estudio Web Boutique
-              </span>
-            </div>
+            <span className="font-serif text-xl sm:text-2xl tracking-[0.15em] text-[#F4F5F0] group-hover:text-[#E2C044] transition-colors uppercase">
+              Bunyip<span className="text-[#E2C044] font-light mx-1">·</span>CR
+            </span>
           </Link>
 
           {/* Desktop Nav Links */}
