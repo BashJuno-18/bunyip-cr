@@ -6,7 +6,7 @@ export default function WhatsAppButton() {
   const whatsappMessage = encodeURIComponent(
     "Hola Bunyip CR, me gustaría solicitar información sobre sus servicios web boutique."
   );
-  const whatsappUrl = `https://wa.me/50688888888?text=${whatsappMessage}`;
+  const whatsappUrl = `https://wa.me/50683773255?text=${whatsappMessage}`;
 
   return (
     <a

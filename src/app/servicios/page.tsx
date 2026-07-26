@@ -22,7 +22,7 @@ export default function ServiciosPage() {
     const msg = encodeURIComponent(
       `Hola Bunyip CR, me interesa consultar detalles sobre el servicio: ${servicio}`
     );
-    return `https://wa.me/50688888888?text=${msg}`;
+    return `https://wa.me/50683773255?text=${msg}`;
   };
 
   return (

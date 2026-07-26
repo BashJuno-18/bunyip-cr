@@ -8,6 +8,7 @@ import { Menu, X, ArrowUpRight } from "lucide-react";
 const navLinks = [
   { name: "Inicio", href: "/" },
   { name: "Servicios", href: "/servicios" },
+  { name: "Proyectos", href: "/proyectos" },
   { name: "El Enfoque", href: "/el-enfoque" },
   { name: "Contacto", href: "/contacto" },
 ];
@@ -32,7 +33,7 @@ export default function Navbar() {
   const whatsappMessage = encodeURIComponent(
     "Hola Bunyip CR, me gustaría agendar una consulta sobre sus servicios web boutique."
   );
-  const whatsappUrl = `https://wa.me/50688888888?text=${whatsappMessage}`;
+  const whatsappUrl = `https://wa.me/50683773255?text=${whatsappMessage}`;
 
   return (
     <header
@@ -46,6 +47,14 @@ export default function Navbar() {
         <nav className="flex items-center justify-between">
           {/* Logo Brand */}
           <Link href="/" className="flex items-center gap-3 group">
+            <div className="relative w-9 h-9 sm:w-11 sm:h-11 flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
+              <Image
+                src="/assets/main-logo.png"
+                alt="Bunyip CR Logo"
+                fill
+                className="object-contain"
+              />
+            </div>
             <span className="font-serif text-xl sm:text-2xl tracking-[0.15em] text-[#F4F5F0] group-hover:text-[#E2C044] transition-colors uppercase">
               Bunyip<span className="text-[#E2C044] font-light mx-1">·</span>CR
             </span>

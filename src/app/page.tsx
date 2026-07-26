@@ -20,7 +20,7 @@ export default function Home() {
   const whatsappMessage = encodeURIComponent(
     "Hola Bunyip CR, me gustaría solicitar una propuesta para mi sitio web boutique."
   );
-  const whatsappUrl = `https://wa.me/50688888888?text=${whatsappMessage}`;
+  const whatsappUrl = `https://wa.me/50683773255?text=${whatsappMessage}`;
 
   return (
     <div className="min-h-screen bg-[#0B100D] text-[#F4F5F0] flex flex-col font-sans selection:bg-[#39FF14]/30 selection:text-[#39FF14]">
@@ -46,11 +46,6 @@ export default function Home() {
 
           {/* Hero Content */}
           <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 text-center flex flex-col items-center justify-center pt-32">
-            {/* Eyebrow */}
-            <div className="font-serif italic text-lg sm:text-xl text-[#E2C044] mb-6 tracking-wider opacity-90">
-              Estudio Web Boutique • Costa Rica
-            </div>
-            
             {/* Main Headline */}
             <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl xl:text-[76px] text-[#F4F5F0] leading-[1.15] tracking-tight mb-8 px-4">
               PLATAFORMAS WEB <br className="hidden sm:block" /> DE ALTA GAMA <br className="hidden sm:block" />

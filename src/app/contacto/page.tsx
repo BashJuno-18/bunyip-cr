@@ -22,11 +22,11 @@ export default function ContactoPage() {
     const whatsappMsg = encodeURIComponent(
       `Hola Bunyip CR, mi nombre es ${formData.nombre} de ${formData.organizacion || "Firma Profesional"}. Me interesa el servicio de ${formData.servicio}. Mensaje: ${formData.mensaje}`
     );
-    window.open(`https://wa.me/50688888888?text=${whatsappMsg}`, "_blank");
+    window.open(`https://wa.me/50683773255?text=${whatsappMsg}`, "_blank");
     setSubmitted(true);
   };
 
-  const whatsappUrl = `https://wa.me/50688888888?text=${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/50683773255?text=${encodeURIComponent(
     "Hola Bunyip CR, quisiera realizar una consulta directa."
   )}`;
 

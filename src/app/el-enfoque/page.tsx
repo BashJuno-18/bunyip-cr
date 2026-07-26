@@ -15,7 +15,7 @@ export default function ElEnfoquePage() {
   const whatsappMessage = encodeURIComponent(
     "Hola Bunyip CR, leí sobre su enfoque boutique y me gustaría agendar una reunión."
   );
-  const whatsappUrl = `https://wa.me/50688888888?text=${whatsappMessage}`;
+  const whatsappUrl = `https://wa.me/50683773255?text=${whatsappMessage}`;
 
   return (
     <div className="min-h-screen bg-[#0B100D] text-[#F4F5F0] flex flex-col font-sans selection:bg-[#39FF14]/30 selection:text-[#39FF14]">
