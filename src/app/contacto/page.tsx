@@ -5,7 +5,7 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import { Send, CheckCircle2, MessageSquare, ArrowUpRight } from "lucide-react";
+import { Send, CheckCircle2, MessageSquare, ArrowUpRight, Mail } from "lucide-react";
 
 export default function ContactoPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -19,10 +19,17 @@ export default function ContactoPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const whatsappMsg = encodeURIComponent(
-      `Hola Bunyip CR, mi nombre es ${formData.nombre} de ${formData.organizacion || "Firma Profesional"}. Me interesa el servicio de ${formData.servicio}. Mensaje: ${formData.mensaje}`
+    const subject = encodeURIComponent(
+      `Consulta Web - ${formData.nombre} (${formData.servicio})`
     );
-    window.open(`https://wa.me/50683773255?text=${whatsappMsg}`, "_blank");
+    const body = encodeURIComponent(
+      `Nombre Completo: ${formData.nombre}\n` +
+      `Correo Electrónico: ${formData.email}\n` +
+      `Organización / Empresa: ${formData.organizacion || "No especificada"}\n` +
+      `Servicio de Interés: ${formData.servicio}\n\n` +
+      `Detalles del proyecto:\n${formData.mensaje}`
+    );
+    window.location.href = `mailto:bunyipai@gmail.com?subject=${subject}&body=${body}`;
     setSubmitted(true);
   };
 
@@ -72,7 +79,7 @@ export default function ContactoPage() {
                   Envía un Mensaje Directo
                 </h2>
                 <p className="text-base sm:text-lg text-[#F4F5F0]/70 font-light leading-relaxed">
-                  Completa el formulario y te responderemos en menos de 24 horas hábiles.
+                  Completa el formulario y te responderemos a <span className="text-[#E2C044]">bunyipai@gmail.com</span> en menos de 24 horas hábiles.
                 </p>
               </div>
 
@@ -82,10 +89,10 @@ export default function ContactoPage() {
                     <CheckCircle2 className="w-7 h-7" />
                   </div>
                   <h3 className="font-serif text-2xl sm:text-3xl text-[#F4F5F0]">
-                    Mensaje Redirigido con Éxito
+                    Correo Preparado con Éxito
                   </h3>
                   <p className="text-base text-[#F4F5F0]/70 font-light leading-relaxed">
-                    Tu consulta ha sido canalizada a WhatsApp para una atención inmediata sin demoras.
+                    Se ha abierto tu cliente de correo para enviar la consulta directamente a <span className="text-[#E2C044] font-medium">bunyipai@gmail.com</span>.
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
@@ -190,38 +197,58 @@ export default function ContactoPage() {
                       className="inline-flex items-center justify-center gap-3 px-10 py-4 bg-[#F4F5F0] text-[#0B100D] font-sans font-bold text-xs sm:text-sm tracking-[0.2em] uppercase rounded-full hover:bg-[#E2C044] transition-colors duration-300"
                     >
                       <Send className="w-4 h-4" />
-                      <span>Enviar Formulario Ejecutivo</span>
+                      <span>Enviar por Correo Ejecutivo</span>
                     </button>
                   </div>
                 </form>
               )}
             </div>
 
-            {/* RIGHT: WhatsApp Card + Image */}
-            <div className="space-y-12 lg:pt-24">
-              {/* WhatsApp Card */}
-              <div className="space-y-6">
-                <div className="w-14 h-14 rounded-full bg-[#E2C044]/10 text-[#E2C044] flex items-center justify-center">
-                  <MessageSquare className="w-7 h-7" />
+            {/* RIGHT: Contact Info + Image */}
+            <div className="space-y-8 lg:pt-12">
+              {/* Direct Email Card */}
+              <div className="space-y-4 p-8 rounded-2xl bg-[#121814]/70 border border-[#F4F5F0]/10 backdrop-blur-sm">
+                <div className="w-12 h-12 rounded-full bg-[#E2C044]/10 text-[#E2C044] flex items-center justify-center">
+                  <Mail className="w-6 h-6" />
                 </div>
-                <h3 className="font-serif text-2xl sm:text-3xl text-[#F4F5F0] leading-tight">
+                <h3 className="font-serif text-xl sm:text-2xl text-[#F4F5F0]">
+                  Correo Ejecutivo Directo
+                </h3>
+                <p className="text-sm text-[#F4F5F0]/70 font-light leading-relaxed">
+                  Envía tus consultas directamente a nuestra casilla ejecutiva:
+                </p>
+                <a
+                  href="mailto:bunyipai@gmail.com"
+                  className="inline-flex items-center gap-2 text-sm sm:text-base text-[#E2C044] font-medium hover:underline pt-1"
+                >
+                  <span>bunyipai@gmail.com</span>
+                  <ArrowUpRight className="w-4 h-4" />
+                </a>
+              </div>
+
+              {/* WhatsApp Card */}
+              <div className="space-y-4 p-8 rounded-2xl bg-[#121814]/70 border border-[#F4F5F0]/10 backdrop-blur-sm">
+                <div className="w-12 h-12 rounded-full bg-[#E2C044]/10 text-[#E2C044] flex items-center justify-center">
+                  <MessageSquare className="w-6 h-6" />
+                </div>
+                <h3 className="font-serif text-xl sm:text-2xl text-[#F4F5F0]">
                   ¿Prefieres Respuesta Inmediata?
                 </h3>
-                <p className="text-base text-[#F4F5F0]/70 font-light leading-relaxed">
+                <p className="text-sm text-[#F4F5F0]/70 font-light leading-relaxed">
                   Inicia un chat directo en WhatsApp con el desarrollador principal sin intermediarios.
                 </p>
                 <a
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-10 py-4 bg-[#F4F5F0] text-[#0B100D] font-sans font-bold text-xs sm:text-sm tracking-[0.2em] uppercase rounded-full hover:bg-[#E2C044] transition-colors duration-300"
+                  className="inline-flex items-center justify-center px-8 py-3 bg-transparent text-[#F4F5F0] font-sans font-bold text-xs tracking-[0.15em] uppercase rounded-full border border-[#F4F5F0]/30 hover:border-[#E2C044] hover:text-[#E2C044] transition-colors duration-300"
                 >
                   Chat Directo WhatsApp
                 </a>
               </div>
 
               {/* Image */}
-              <div className="relative aspect-[4/3] w-full overflow-hidden shadow-2xl">
+              <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl border border-[#F4F5F0]/10 shadow-2xl">
                 <Image
                   src="/assets/contact-section-img.png"
                   alt="Bunyip CR Contact Section Visual"

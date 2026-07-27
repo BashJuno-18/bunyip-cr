@@ -110,14 +110,6 @@ export default function ServiciosPage() {
         <section className="border-t border-[#F4F5F0]/10 py-24 sm:py-32 overflow-hidden relative">
           <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-[#E2C044]/5 blur-[120px] rounded-full pointer-events-none z-0" />
           <div className="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center relative z-10">
-            <div className="relative aspect-[4/5] sm:aspect-square lg:aspect-[4/5] w-full overflow-hidden shadow-2xl lg:order-1">
-              <Image
-                src="/assets/stock-image-2.png"
-                alt="Mantenimiento y Evolucion SEO"
-                fill
-                className="object-cover transition-transform duration-700 hover:scale-105 filter contrast-125"
-              />
-            </div>
             <div className="space-y-8 lg:order-2">
               <div className="font-serif italic text-[#E2C044] text-4xl opacity-50">02</div>
               <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#F4F5F0] leading-tight tracking-tight uppercase">
@@ -151,6 +143,14 @@ export default function ServiciosPage() {
                   Consultar Planes de Mantenimiento
                 </a>
               </div>
+            </div>
+            <div className="relative aspect-[4/5] sm:aspect-square lg:aspect-[4/5] w-full overflow-hidden shadow-2xl lg:order-1">
+              <Image
+                src="/assets/stock-image-2.png"
+                alt="Mantenimiento y Evolucion SEO"
+                fill
+                className="object-cover transition-transform duration-700 hover:scale-105 filter contrast-125"
+              />
             </div>
           </div>
         </section>

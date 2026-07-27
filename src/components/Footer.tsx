@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight, MessageSquare, MapPin } from "lucide-react";
+import { ArrowUpRight, MessageSquare, MapPin, Mail } from "lucide-react";
 
 export default function Footer() {
   const whatsappMessage = encodeURIComponent(
@@ -85,16 +85,25 @@ export default function Footer() {
               <p className="text-sm text-[#F4F5F0]/60 leading-relaxed font-light">
                 Atención personalizada para firmas legales, consultorías y servicios profesionales corporativos.
               </p>
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-6 py-3.5 rounded-full text-xs font-bold uppercase tracking-[0.15em] bg-transparent text-[#F4F5F0] border border-[#F4F5F0]/30 hover:border-[#E2C044] hover:text-[#E2C044] transition-all duration-300"
-              >
-                <MessageSquare className="w-4 h-4" />
-                <span>WhatsApp Directo</span>
-                <ArrowUpRight className="w-3.5 h-3.5" />
-              </a>
+              <div className="flex flex-col gap-3">
+                <a
+                  href="mailto:bunyipai@gmail.com"
+                  className="inline-flex items-center gap-3 text-sm text-[#F4F5F0]/80 hover:text-[#E2C044] transition-colors duration-300 font-light"
+                >
+                  <Mail className="w-4 h-4 text-[#E2C044]" />
+                  <span>bunyipai@gmail.com</span>
+                </a>
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 px-6 py-3.5 rounded-full text-xs font-bold uppercase tracking-[0.15em] bg-transparent text-[#F4F5F0] border border-[#F4F5F0]/30 hover:border-[#E2C044] hover:text-[#E2C044] transition-all duration-300 w-fit"
+                >
+                  <MessageSquare className="w-4 h-4" />
+                  <span>WhatsApp Directo</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </a>
+              </div>
             </div>
           </div>
 
