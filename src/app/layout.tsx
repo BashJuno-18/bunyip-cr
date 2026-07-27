@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans, Playfair_Display } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const inter = Inter({
@@ -32,7 +33,10 @@ export default function RootLayout({
       lang="es"
       className={`${inter.variable} ${plusJakartaSans.variable} ${playfairDisplay.variable} dark antialiased`}
     >
-      <body className="min-h-screen flex flex-col font-sans bg-background text-foreground">{children}</body>
+      <body className="min-h-screen flex flex-col font-sans bg-background text-foreground">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
