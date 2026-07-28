@@ -101,6 +101,18 @@ export default function Home() {
                 title: "Consultores Financieros",
                 desc: "Arquitectura limpia orientada a captar clientes corporativos de alto valor.",
               },
+              {
+                title: "Restaurantes & Gastronomía",
+                desc: "Menús digitales interactivos y sistemas de reserva que cautivan comensales desde el primer clic.",
+              },
+              {
+                title: "Salones de Belleza & Estética",
+                desc: "Escaparates visuales de alto impacto con agendamiento integrado para atraer clientes exclusivos.",
+              },
+              {
+                title: "Negocios & Emprendimientos",
+                desc: "Presencia digital profesional llave en mano para todo rubro que busque calidad boutique.",
+              },
             ].map((item, idx) => (
               <div key={idx} className="group border-t border-[#F4F5F0]/20 pt-6">
                 <h4 className="font-serif text-xl sm:text-2xl text-[#F4F5F0] mb-4 group-hover:text-[#E2C044] transition-colors uppercase tracking-wide">
