@@ -186,7 +186,7 @@ export default function Home() {
             
             <div className="space-y-8">
               <span className="font-serif italic text-[#E2C044] tracking-wide text-lg sm:text-xl">
-                El Enfoque Solopreneur & Vibe Coding
+                El Enfoque Solopreneur
               </span>
               <h3 className="font-serif text-3xl sm:text-5xl text-[#F4F5F0] leading-tight tracking-tight uppercase">
                 Trato Directo con el Arquitecto Principal.
